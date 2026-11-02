@@ -1,0 +1,121 @@
+:host {
+  display: block;
+  min-height: calc(100vh - 70px);
+  padding: 3rem 1.25rem;
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.16), transparent 34rem),
+    linear-gradient(135deg, #f8fafc 0%, #ecfeff 100%);
+  color: #1e293b;
+  overflow-x: auto;
+}
+
+p {
+  margin: 0 auto 1.75rem;
+  color: #0f766e;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+table {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 20px 45px rgba(51, 65, 85, 0.12);
+}
+
+thead {
+  background: linear-gradient(135deg, #0f766e, #0891b2);
+  color: #fff;
+}
+
+th,
+td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+th {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  transition: background 160ms ease;
+}
+
+tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+  background: #f0fdfa;
+}
+
+td {
+  color: #475569;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+td:first-child {
+  color: #0f766e;
+  font-weight: 800;
+}
+
+td:nth-child(3) {
+  width: 220px;
+}
+
+img {
+  display: block;
+  width: 180px;
+  height: 120px;
+  border-radius: 0.8rem;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.14);
+}
+
+button {
+  border: 0;
+  border-radius: 0.7rem;
+  padding: 0.65rem 0.9rem;
+  background: #0f766e;
+  box-shadow: 0 7px 15px rgba(15, 118, 110, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+button:hover {
+  background: #115e59;
+  box-shadow: 0 9px 18px rgba(15, 118, 110, 0.3);
+  transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(14, 165, 233, 0.35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  :host {
+    padding: 2rem 0.75rem;
+  }
+
+  table {
+    min-width: 720px;
+  }
+}

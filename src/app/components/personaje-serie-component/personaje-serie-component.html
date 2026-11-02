@@ -1,1 +1,25 @@
 <p>personaje-serie-component works!</p>
+<table >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(personaje of arrayPersonajes;track personaje){
+        <tr>
+            <td>{{personaje.idPersonaje}}</td>
+            <td>{{personaje.nombre}}</td>
+            <td>
+                <img src="{{personaje.imagen}}" alt="Imagen del personaje" width="200">
+            </td>
+            <td>
+                <button class="btn btn-primary" [routerLink]="['/serie',personaje.idSerie]">Volver a Serie</button>
+            </td>
+        </tr>
+        }
+    </tbody>    
+
+</table>

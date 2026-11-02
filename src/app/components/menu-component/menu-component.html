@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" [routerLink]="['/crear']">Crear Personaje</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" [routerLink]="['/serie']"></a>
@@ -22,7 +22,7 @@
           <ul class="dropdown-menu">
             @for(serie of arraySeries;track serie){
             <li>
-                <a class="dropdown-item" href="#" [routerLink]="['/personajeserie',serie.idSerie]">{{serie.nombre}}</a>
+                <a class="dropdown-item" href="#" [routerLink]="['/serie',serie.idSerie]">{{serie.nombre}}</a>
             </li>
             }
           </ul>

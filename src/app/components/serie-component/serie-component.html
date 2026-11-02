@@ -1,1 +1,11 @@
 <p>serie-component works!</p>
+<button class="btn btn-primary" [routerLink]="['/']">Volver a Home</button>
+<ul>
+    <li>ID:{{serie.idSerie}}</li>
+
+    <li>Nombre: {{serie.nombre}}</li>
+    <li>Imagen:
+        <img src="{{serie.imagen}}" alt="Imagen de la serie" width="200">
+    </li>
+    <button [routerLink]="['/personaje',serie.idSerie]">Personajes</button>
+</ul>
