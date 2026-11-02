@@ -1,2 +1,17 @@
 <p>create-component works!</p>
  
+<form createForm="ngForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="cajanombre" #cajanombre>
+    <label for="imagen">Imagen:</label>
+    <input type="text" id="imagen" name="cajaimagen" #cajaimagen>   
+    <label for="idSerie">ID Serie:</label>
+    <select id="idSerie" name="cajaidSerie" #cajaidSerie>
+        @for(serie of arraySeries;track serie){
+            <option value="{{serie.idSerie}}">{{serie.nombre}}</option>
+        }
+    </select>
+
+</form>
+
+    <button class="btn btn-primary" (click)="crearPersonaje()">Crear Personaje</button>

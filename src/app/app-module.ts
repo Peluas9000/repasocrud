@@ -11,7 +11,7 @@ import { MenuComponent } from './components/menu-component/menu-component';
 import { HomeComponent } from './components/home-component/home-component';
 import { SerieComponent } from './components/serie-component/serie-component';
 import { PersonajeSerieComponent } from './components/personaje-serie-component/personaje-serie-component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ServiceSeries } from './services/service.series';
 import { CreateComponent } from './components/create-component/create-component';
@@ -25,8 +25,8 @@ import { CreateComponent } from './components/create-component/create-component'
     PersonajeSerieComponent,
     CreateComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [provideBrowserGlobalErrorListeners(), ServiceSeries],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [provideBrowserGlobalErrorListeners(), ServiceSeries,provideHttpClient()],
   bootstrap: [App],
 })
 export class AppModule {}
